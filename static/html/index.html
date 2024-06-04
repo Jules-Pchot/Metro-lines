@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Métro, Boulot, Dodo</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container-global">
+      <div class="form-container">
+        <form id="journeyForm">
+          <input type="text" id="startStation" placeholder="Entrez la station de départ" required list="stationsList" />
+          <datalist id="stationsList"> </datalist>
+          <input type="text" id="endStation" placeholder="Entrez la station d'arrivée" required list="stationsList" />
+          <input type="submit" value="Trouver le chemin" />
+          <button id="showAcpm" class="custom-button" type="button">Afficher ACPM</button>
+          <div class="journey-details"></div>
+          <div class="acpm-weight"></div>
+        </form>
+      </div>
+      <div class="map-outer-container">
+        <div class="map-container">
+          <div class="map"></div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/panzoom@9.4.0/dist/panzoom.min.js"></script>
+    <script src="/static/js/script.js"></script>
+  </body>
+</html>
